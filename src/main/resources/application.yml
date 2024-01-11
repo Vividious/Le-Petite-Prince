@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+    username: vividious
+    password: devTest1234
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+
+mqtt:
+  client-id: le-petite-prince
+  uri: tcp://localhost:1883
+  connection-timeout: 30000
+  max-reconnect-delay: 1000
+  auth:
+    username: vividious
+    password: devTest1234

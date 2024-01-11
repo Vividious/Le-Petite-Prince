@@ -14,7 +14,9 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
-        <datasource-mapping />
+        <datasource-mapping>
+          <factory-entry name="entityManagerFactory" />
+        </datasource-mapping>
         <naming-strategy-map />
       </configuration>
     </facet>
@@ -57,20 +59,13 @@
     <orderEntry type="library" name="Maven: org.antlr:antlr4-runtime:4.13.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-jpa:3.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:3.2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-orm:6.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:6.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:6.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:6.1.2" level="project" />
     <orderEntry type="library" name="Maven: jakarta.annotation:jakarta.annotation-api:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:2.0.9" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:6.1.2" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-integration:3.2.1" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.integration:spring-integration-core:6.2.1" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-messaging:6.1.2" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.retry:spring-retry:2.0.5" level="project" />
-    <orderEntry type="library" name="Maven: io.projectreactor:reactor-core:3.6.1" level="project" />
-    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.4" level="project" />
-    <orderEntry type="library" name="Maven: io.micrometer:micrometer-observation:1.12.1" level="project" />
-    <orderEntry type="library" name="Maven: io.micrometer:micrometer-commons:1.12.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:3.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:3.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:3.2.1" level="project" />
@@ -94,11 +89,17 @@
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:10.1.17" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:10.1.17" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:6.1.2" level="project" />
+    <orderEntry type="library" name="Maven: io.micrometer:micrometer-observation:1.12.1" level="project" />
+    <orderEntry type="library" name="Maven: io.micrometer:micrometer-commons:1.12.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:6.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:6.1.2" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.integration:spring-integration-http:6.2.1" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.integration:spring-integration-jpa:6.2.1" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-orm:6.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.integration:spring-integration-mqtt:6.2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.integration:spring-integration-core:6.2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-messaging:6.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.retry:spring-retry:2.0.5" level="project" />
+    <orderEntry type="library" name="Maven: io.projectreactor:reactor-core:3.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.paho:org.eclipse.paho.mqttv5.client:1.2.5" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.postgresql:postgresql:42.6.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.checkerframework:checker-qual:3.31.0" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.30" level="project" />
