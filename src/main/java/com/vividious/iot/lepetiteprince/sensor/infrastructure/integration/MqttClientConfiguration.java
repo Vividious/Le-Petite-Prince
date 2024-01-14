@@ -1,23 +1,16 @@
-package com.vividious.iot.lepetiteprince.infrastructure;
+package com.vividious.iot.lepetiteprince.sensor.infrastructure.integration;
 
 import org.eclipse.paho.mqttv5.client.IMqttAsyncClient;
 import org.eclipse.paho.mqttv5.client.MqttConnectionOptions;
 import org.eclipse.paho.mqttv5.client.persist.MqttDefaultFilePersistence;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.integration.annotation.ServiceActivator;
-import org.springframework.integration.channel.DirectChannel;
-import org.springframework.integration.dsl.IntegrationFlow;
 import org.springframework.integration.mqtt.core.ClientManager;
 import org.springframework.integration.mqtt.core.Mqttv5ClientManager;
-import org.springframework.integration.mqtt.inbound.Mqttv5PahoMessageDrivenChannelAdapter;
-import org.springframework.messaging.Message;
-import org.springframework.messaging.MessageChannel;
 
 @Configuration
-public class MqttConfiguration {
+public class MqttClientConfiguration {
 
   @Bean
   public ClientManager<IMqttAsyncClient, MqttConnectionOptions> clientManager(
@@ -38,26 +31,5 @@ public class MqttConfiguration {
     Mqttv5ClientManager clientManager = new Mqttv5ClientManager(connectionOptions, clientId);
     clientManager.setPersistence(new MqttDefaultFilePersistence());
     return clientManager;
-  }
-  @Bean
-  public MessageChannel testChannel() {
-    return new DirectChannel();
-  }
-
-  @Bean
-  public IntegrationFlow mqttInFlowTestTopic(
-      ClientManager<IMqttAsyncClient, MqttConnectionOptions> clientManager,
-      @Qualifier("testChannel") MessageChannel testChannel) {
-
-    Mqttv5PahoMessageDrivenChannelAdapter messageProducer =
-        new Mqttv5PahoMessageDrivenChannelAdapter(clientManager, "test");
-    return IntegrationFlow.from(messageProducer)
-        .channel(testChannel)
-        .get();
-  }
-
-  @ServiceActivator(inputChannel = "testChannel")
-  public void handleMessage(Message<String> message) {
-    System.out.println("Received Message: " + message.getPayload());
   }
 }

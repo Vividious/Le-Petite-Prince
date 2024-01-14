@@ -1,4 +1,4 @@
-package com.vividious.iot.lepetiteprince.repository;
+package com.vividious.iot.lepetiteprince.sensor.repository;
 
 import com.vividious.iot.lepetiteprince.sensor.model.Sensor;
 import java.util.UUID;

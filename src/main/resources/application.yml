@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
+    url: jdbc:postgresql://192.168.0.188:5432/postgres
     driver-class-name: org.postgresql.Driver
     username: vividious
     password: devTest1234
@@ -12,7 +12,7 @@ spring:
 
 mqtt:
   client-id: le-petite-prince
-  uri: tcp://localhost:1883
+  uri: tcp://192.168.0.188:1883
   connection-timeout: 30000
   max-reconnect-delay: 1000
   auth:
