@@ -44,3 +44,6 @@ Webclient with pretty UI
 ```shell
 sudo docker run -d --name mqttx-web -p 80:80 emqx/mqttx-web
 ```
+
+
+https://stackoverflow.com/questions/47846492/spring-integration-manually-publish-message-to-channel

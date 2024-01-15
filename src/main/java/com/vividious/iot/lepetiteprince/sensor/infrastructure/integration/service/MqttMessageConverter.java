@@ -1,4 +1,4 @@
-package com.vividious.iot.lepetiteprince.sensor.infrastructure.integration;
+package com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.validation.constraints.NotNull;
@@ -23,6 +23,7 @@ public class MqttMessageConverter extends AbstractMessageConverter {
 
   @Override
   @SneakyThrows
+  //TODO: handle parsing problems
   protected Object convertToInternal(Object payload, MessageHeaders headers,
       Object conversionHint) {
     return objectMapper.readValue((byte[]) payload, (Class<?>) conversionHint);

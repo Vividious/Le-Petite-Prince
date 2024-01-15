@@ -10,9 +10,6 @@
         <module name="le-petite-prince" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="le-petite-prince" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

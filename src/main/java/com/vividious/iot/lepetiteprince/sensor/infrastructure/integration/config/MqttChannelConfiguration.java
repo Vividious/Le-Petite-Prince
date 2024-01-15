@@ -1,7 +1,11 @@
-package com.vividious.iot.lepetiteprince.sensor.infrastructure.integration;
+package com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.config;
+
+import static com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.MqttTopic.constructHandshakeTopic;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vividious.iot.lepetiteprince.sensor.event.Handshake;
+import com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.service.MqttMessageConverter;
+import com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.MqttTopic;
 import org.eclipse.paho.mqttv5.client.IMqttAsyncClient;
 import org.eclipse.paho.mqttv5.client.MqttConnectionOptions;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -18,23 +22,23 @@ import org.springframework.messaging.MessageChannel;
 @Configuration
 public class MqttChannelConfiguration {
 
-  public static final String SENSOR_HANDSHAKE_TOPIC = "raspberry_home/+/howdy";
-
   @Bean
   public MessageChannel mqttHandshakeInboundChannel() {
     return new QueueChannel();
   }
 
   @Bean
-  public MqttMessageConverter mqttMessageConverter(ObjectMapper objectMapper){
+  public MqttMessageConverter mqttMessageConverter(ObjectMapper objectMapper) {
     return new MqttMessageConverter(objectMapper);
   }
 
   @Bean
   public MessageProducer handshakeMessageProducer(
-      ClientManager<IMqttAsyncClient, MqttConnectionOptions> clientManager, MqttMessageConverter mqttMessageConverter) {
+      ClientManager<IMqttAsyncClient, MqttConnectionOptions> clientManager,
+      MqttMessageConverter mqttMessageConverter) {
+    MqttTopic handshakeTopic = constructHandshakeTopic();
     Mqttv5PahoMessageDrivenChannelAdapter messageProducer =
-        new Mqttv5PahoMessageDrivenChannelAdapter(clientManager, SENSOR_HANDSHAKE_TOPIC);
+        new Mqttv5PahoMessageDrivenChannelAdapter(clientManager, handshakeTopic.name());
 
     messageProducer.setQos(1);
     messageProducer.setOutputChannel(mqttHandshakeInboundChannel());

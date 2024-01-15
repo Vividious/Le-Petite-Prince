@@ -2,17 +2,17 @@ package com.vividious.iot.lepetiteprince.sensor.event;
 
 import com.vividious.iot.lepetiteprince.sensor.model.Action;
 import jakarta.validation.constraints.NotNull;
-import java.util.List;
+import java.util.Set;
 
 
-public record Handshake(@NotNull String name, List<Action> availableActions) {
+public record Handshake(@NotNull String sensorName, Set<Action> availableActions, String parentDeviceName) {
 
   public Handshake {
     // ensure immutable collection
     if (availableActions == null) {
-      availableActions = List.of();
+      availableActions = Set.of();
     } else {
-      availableActions = List.copyOf(availableActions);
+      availableActions = Set.copyOf(availableActions);
     }
   }
 }
