@@ -1,7 +1,6 @@
-package com.vividious.iot.lepetiteprince.sensor.service;
+package com.vividious.iot.lepetiteprince.service;
 
-import com.vividious.iot.lepetiteprince.sensor.model.Action;
-import com.vividious.iot.lepetiteprince.sensor.model.Sensor;
+import com.vividious.iot.lepetiteprince.model.Action;
 
 public interface SensorActionExecutor {
 

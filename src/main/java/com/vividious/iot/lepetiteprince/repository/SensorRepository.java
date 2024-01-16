@@ -1,6 +1,6 @@
-package com.vividious.iot.lepetiteprince.sensor.repository;
+package com.vividious.iot.lepetiteprince.repository;
 
-import com.vividious.iot.lepetiteprince.sensor.model.Sensor;
+import com.vividious.iot.lepetiteprince.model.Sensor;
 import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

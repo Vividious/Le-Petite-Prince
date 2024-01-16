@@ -1,4 +1,4 @@
-package com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.service;
+package com.vividious.iot.lepetiteprince.integration.service;
 
 import org.springframework.integration.annotation.MessagingGateway;
 import org.springframework.integration.mqtt.support.MqttHeaders;

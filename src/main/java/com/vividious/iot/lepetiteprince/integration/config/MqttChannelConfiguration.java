@@ -1,11 +1,11 @@
-package com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.config;
+package com.vividious.iot.lepetiteprince.integration.config;
 
-import static com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.MqttTopic.constructHandshakeTopic;
+import static com.vividious.iot.lepetiteprince.integration.MqttTopic.constructHandshakeTopic;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.vividious.iot.lepetiteprince.sensor.event.Handshake;
-import com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.service.MqttMessageConverter;
-import com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.MqttTopic;
+import com.vividious.iot.lepetiteprince.event.Handshake;
+import com.vividious.iot.lepetiteprince.integration.service.MqttMessageConverter;
+import com.vividious.iot.lepetiteprince.integration.MqttTopic;
 import org.eclipse.paho.mqttv5.client.IMqttAsyncClient;
 import org.eclipse.paho.mqttv5.client.MqttConnectionOptions;
 import org.springframework.beans.factory.annotation.Qualifier;

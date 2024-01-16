@@ -1,7 +1,7 @@
-package com.vividious.iot.lepetiteprince.sensor.controller;
+package com.vividious.iot.lepetiteprince.controller;
 
-import com.vividious.iot.lepetiteprince.sensor.model.Sensor;
-import com.vividious.iot.lepetiteprince.sensor.repository.SensorRepository;
+import com.vividious.iot.lepetiteprince.model.Sensor;
+import com.vividious.iot.lepetiteprince.repository.SensorRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

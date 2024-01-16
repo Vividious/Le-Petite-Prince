@@ -1,4 +1,4 @@
-package com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.config;
+package com.vividious.iot.lepetiteprince.integration.config;
 
 import org.eclipse.paho.mqttv5.client.IMqttAsyncClient;
 import org.eclipse.paho.mqttv5.client.MqttConnectionOptions;

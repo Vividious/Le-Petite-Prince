@@ -1,4 +1,4 @@
-package com.vividious.iot.lepetiteprince.sensor.model;
+package com.vividious.iot.lepetiteprince.model;
 
 public enum Action {
   MEASURE,

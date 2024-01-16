@@ -1,4 +1,4 @@
-package com.vividious.iot.lepetiteprince.sensor.event;
+package com.vividious.iot.lepetiteprince.event;
 
 import jakarta.validation.constraints.NotNull;
 

@@ -1,6 +1,6 @@
-package com.vividious.iot.lepetiteprince.sensor.event;
+package com.vividious.iot.lepetiteprince.event;
 
-import com.vividious.iot.lepetiteprince.sensor.model.Action;
+import com.vividious.iot.lepetiteprince.model.Action;
 import jakarta.validation.constraints.NotNull;
 import java.util.Set;
 

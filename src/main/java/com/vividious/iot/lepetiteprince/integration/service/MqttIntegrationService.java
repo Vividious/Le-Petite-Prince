@@ -1,11 +1,11 @@
-package com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.service;
+package com.vividious.iot.lepetiteprince.integration.service;
 
-import static com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.MqttTopic.constructHandshakeResponseTopic;
+import static com.vividious.iot.lepetiteprince.integration.MqttTopic.constructHandshakeResponseTopic;
 
-import com.vividious.iot.lepetiteprince.sensor.event.Handshake;
-import com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.MqttTopic;
-import com.vividious.iot.lepetiteprince.sensor.model.Sensor;
-import com.vividious.iot.lepetiteprince.sensor.service.SensorRegistrar;
+import com.vividious.iot.lepetiteprince.event.Handshake;
+import com.vividious.iot.lepetiteprince.integration.MqttTopic;
+import com.vividious.iot.lepetiteprince.model.Sensor;
+import com.vividious.iot.lepetiteprince.service.SensorRegistrar;
 import lombok.RequiredArgsConstructor;
 import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.messaging.Message;

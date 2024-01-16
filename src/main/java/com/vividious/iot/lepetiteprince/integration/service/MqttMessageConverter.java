@@ -1,4 +1,4 @@
-package com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.service;
+package com.vividious.iot.lepetiteprince.integration.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.validation.constraints.NotNull;

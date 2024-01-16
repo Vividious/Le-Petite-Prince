@@ -1,14 +1,14 @@
-package com.vividious.iot.lepetiteprince.sensor.service;
+package com.vividious.iot.lepetiteprince.service;
 
-import static com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.MqttTopic.constructActionTopicFor;
+import static com.vividious.iot.lepetiteprince.integration.MqttTopic.constructActionTopicFor;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.vividious.iot.lepetiteprince.sensor.event.ActionDetails;
-import com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.service.MqttIntegrationGateway;
-import com.vividious.iot.lepetiteprince.sensor.infrastructure.integration.MqttTopic;
-import com.vividious.iot.lepetiteprince.sensor.model.Action;
-import com.vividious.iot.lepetiteprince.sensor.model.Sensor;
-import com.vividious.iot.lepetiteprince.sensor.repository.SensorRepository;
+import com.vividious.iot.lepetiteprince.event.ActionDetails;
+import com.vividious.iot.lepetiteprince.integration.service.MqttIntegrationGateway;
+import com.vividious.iot.lepetiteprince.integration.MqttTopic;
+import com.vividious.iot.lepetiteprince.model.Action;
+import com.vividious.iot.lepetiteprince.model.Sensor;
+import com.vividious.iot.lepetiteprince.repository.SensorRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;

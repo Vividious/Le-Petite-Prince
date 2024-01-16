@@ -1,8 +1,8 @@
-package com.vividious.iot.lepetiteprince.sensor.infrastructure.integration;
+package com.vividious.iot.lepetiteprince.integration;
 
 
-import com.vividious.iot.lepetiteprince.sensor.model.Action;
-import com.vividious.iot.lepetiteprince.sensor.model.Sensor;
+import com.vividious.iot.lepetiteprince.model.Action;
+import com.vividious.iot.lepetiteprince.model.Sensor;
 
 
 public record MqttTopic(String name) {

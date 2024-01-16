@@ -1,7 +1,7 @@
-package com.vividious.iot.lepetiteprince.sensor.model;
+package com.vividious.iot.lepetiteprince.model;
 
 
-import com.vividious.iot.lepetiteprince.sensor.event.Handshake;
+import com.vividious.iot.lepetiteprince.event.Handshake;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

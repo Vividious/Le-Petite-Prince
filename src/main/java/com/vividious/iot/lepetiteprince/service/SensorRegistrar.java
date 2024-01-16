@@ -1,8 +1,8 @@
-package com.vividious.iot.lepetiteprince.sensor.service;
+package com.vividious.iot.lepetiteprince.service;
 
-import com.vividious.iot.lepetiteprince.sensor.event.Handshake;
-import com.vividious.iot.lepetiteprince.sensor.model.Sensor;
-import com.vividious.iot.lepetiteprince.sensor.repository.SensorRepository;
+import com.vividious.iot.lepetiteprince.event.Handshake;
+import com.vividious.iot.lepetiteprince.model.Sensor;
+import com.vividious.iot.lepetiteprince.repository.SensorRepository;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
