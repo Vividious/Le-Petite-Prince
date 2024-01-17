@@ -52,11 +52,7 @@ public class Sensor {
         .build();
   }
 
-  public boolean canActivate() {
-    return actions.contains(Action.TURN_ON);
-  }
-
-  public boolean canDeactivate() {
-    return actions.contains(Action.TURN_OFF);
+  public boolean isSupported(Action action) {
+    return actions.contains(action);
   }
 }
