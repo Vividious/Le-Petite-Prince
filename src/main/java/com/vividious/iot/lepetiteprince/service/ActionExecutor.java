@@ -21,21 +21,22 @@ public class ActionExecutor {
 
   private final MqttIntegrationGateway mqttIntegrationGateway;
   private final SensorRepository sensorRepository;
+  private final ActionExecutionHistoryService actionExecutionHistoryService;
   private final ObjectMapper objectMapper;
 
   public void executeAction(ActionDetails actionDetails) {
-    Sensor sensor = sensorRepository.findByName(actionDetails.getSensorName());
+    Sensor sensor = sensorRepository.findSensorSupportingActionByName(actionDetails.getSensorName(),
+        actionDetails.getAction());
 
-    if (sensor == null || !sensor.isSupported(actionDetails.getAction())) {
-      return;
+    if (sensor != null) {
+      MqttTopic actionTopic = constructActionTopicFor(sensor, actionDetails.getAction());
+      sendActionDetailsOnMqtt(actionDetails, actionTopic);
     }
 
-    MqttTopic actionTopic = constructActionTopicFor(sensor, actionDetails.getAction());
-
-    sendActionDetailsOnMqtt(actionDetails, actionTopic);
+    actionExecutionHistoryService.createSensorActionLog(sensor, actionDetails);
   }
 
-  public void triggerHandshakes(){
+  public void triggerHandshakes() {
     MqttTopic mqttTopic = MqttTopic.construct(ROOT_TOPIC, "sensors_assemble");
 
     mqttIntegrationGateway.send(mqttTopic.name(), "Sensors Assemble!", 1);
